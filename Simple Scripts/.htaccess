@@ -1,0 +1,4 @@
+RewriteEngine On
+#Rewrite tag to s e.g epinoy.com/?tag=watches => epinoy.com/?s=watches
+RewriteCond %{QUERY_STRING} tag=(.+)
+RewriteRule ^/?(index.php)?$ /?s=%1 [R,L]
